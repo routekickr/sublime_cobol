@@ -1,0 +1,22 @@
+[
+	{
+		"caption": "Clear COBOL Sequence Numbers",
+		"command": "cobol_sequence_numbers_remove"
+	},
+
+	{
+		"caption": "Generate COBOL Sequence Numbers",
+		"command": "cobol_insert_sequence_numbers"
+	},
+
+	{
+		"caption": "Add Blank COBOL Sequence Numbers",
+		"command": "cobol_add_blank_sequence_area"
+	},
+
+	{
+		"caption": "Remove COBOL Sequence Area",
+		"command": "cobol_remove_sequence_area"
+	}
+
+]
