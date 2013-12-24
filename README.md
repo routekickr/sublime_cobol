@@ -1,8 +1,14 @@
-COBOL Language Support
-----------------------
+# COBOL Language Support for Sublime Text 3
 
-Revision History
-================
+## What is this?
 
-Version 1.0 - Dec 24th 2013
- - Initial version
+This package is some simple COBOL language support with some utils that I find useful to me!
+
+
+## What is this not?
+
+An IDE or Intellisense suport for COBOL
+
+## Features
+- Basic COBOL syntax and simple keyword completion 
+
