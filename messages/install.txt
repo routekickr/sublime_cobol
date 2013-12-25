@@ -1,0 +1,6 @@
+COBOL Language Support
+
+COBOL Language Support is a plugin that gives the COBOL users basic COBOL
+syntax highlighting.
+
+Having fun using it.
