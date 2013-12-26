@@ -124,7 +124,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?i)(?i:else|when|select|use|thru|varying|giving|remainder|tallying|through|until|execute|exhibit|returning|using|copy|replace)(?=\s)</string>
+			<string>\b(?&lt;!-)(?i)(?i:else|when|select|use|thru|varying|giving|remainder|tallying|through|until|execute|exhibit|returning|using|copy|replace)(?=\s)</string>
 			<key>name</key>
 			<string>keyword.otherverbs.cobol</string>
 		</dict>
@@ -226,6 +226,37 @@
 			<string>invoke sss:.. </string>
 			<key>match</key>
 			<string>(invoke)\s*([0-9a-zA-Z\.]*)</string>
+			<key>name</key>
+			<string>keyword.invoketype</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.verbs.cobol</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.verbs.cobol</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.verbs.cobol</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.source.cobol</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>set address of:.. </string>
+			<key>match</key>
+			<string>\b(?&lt;!-)(set)\s*(address)\s*(of)\s*([0-9a\-zA-Z\.]*)</string>
 			<key>name</key>
 			<string>keyword.invoketype</string>
 		</dict>
