@@ -49,6 +49,12 @@
 			<string>constant.numeric.cobol</string>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>(?i:true|false)</string>
+			<key>name</key>
+			<string>constant.numeric.cobol</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>(?i:EXEC\s*SQL)</string>
 			<key>end</key>
@@ -130,7 +136,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:assign|organization|indexed|line\*s*sequential|sequential|access|dynamic|relative|label|standard||record\s*key|record|is|alternate|duplicates|disk|disc)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:assign|organization|indexed|line\*s*sequential|sequential|access|dynamic|relative|label|block|contains|standard|records|record\s*key|record|is|alternate|duplicates|disk|disc|mode|random)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.identifers.cobol</string>
 		</dict>
@@ -142,19 +148,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:accept|add|allocate|alter|call|cancel|chain|close|commit|compute|continue|delete|disable|display|divide|enable|enter|evaluate|exhibit|exit|free|generate|go\s*to|go|goback|if|initialize|initiate|inspect|merge|move|multiply|open|perform|purge|raise|read|receive|release|return|rewrite|rounded|rollback|search|send|sort|start|stop|service|subtract|suppress|terminate|then|unlock|unstring|validate|write)(?=\s|\.)</string>
-			<key>name</key>
-			<string>keyword.verbs.cobol</string>
-		</dict>
-		<dict>
-			<key>match</key>
 			<string>\b(?:by value|by reference|by content|value|equal)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.control.miscwords.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:of|input|output|i-o|extend|file|error|exception|overflow|goto|procedure|through|invalid|data|normal|eop|end-of-page|returning|to|giving|into|by|remainder|also|not|numeric|free|depending|converting|replacing|after|before|all|leading|first|initial|reference|content|values|value|ascending|descending|key|retry|until|varying|when|equals|equal|with|(no\s)?advancing|up|down|uccurs|address|length|delimited|count|delimiter|redefines|from|raising|status|class|upon|line|col|reporting|arithmetic|localize|program|class|interface|method|function|in|end)(?=\s)</string>
+			<string>\b(?&lt;!-)(?i:of|input|output|i-o|extend|file|error|exception|overflow|goto|procedure|through|invalid|data|normal|eop|end-of-page|returning|to|giving|into|by|remainder|also|not|numeric|free|depending|converting|replacing|after|before|all|leading|first|initial|reference|content|values|value|ascending|descending|key|retry|until|varying|when|equals|equal|with|(no\s)?advancing|up|down|uccurs|length|delimited|count|delimiter|redefines|from|raising|status|class|upon|line|col|reporting|arithmetic|localize|program|class|interface|method|function|in|end)(?=\s)</string>
 			<key>name</key>
 			<string>keyword.identifers.cobol</string>
 		</dict>
@@ -178,7 +178,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:binary-char|binary-char-unsigned|binary-short|binary-short-unsigned|binary.long|binary-long-unsigned|binary-long|binary-double|binary-double-unsigned|float-short|float-long|condition-value|character|decimal|object\sreference|object|string|unsigned)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:binary-char|binary-char-unsigned|binary-short|binary-short-unsigned|binary.long|binary-long-unsigned|binary-long|binary-double|binary-double-unsigned|float-short|float-long|condition-value|character|comma|decimal|object\sreference|object|string|unsigned)(?=\s|\.)</string>
 			<key>name</key>
 			<string>storage.type.source.cobol</string>
 		</dict>
@@ -204,7 +204,7 @@
 			<key>comment</key>
 			<string>invoke type sss:.. </string>
 			<key>match</key>
-			<string>(invoke)\s*(?i:type)\s*([0-9a-zA-Z\.]*)</string>
+			<string>(?i:invoke)\s*(?i:type)\s*([0-9a-zA-Z\.]*)</string>
 			<key>name</key>
 			<string>keyword.invoketype</string>
 		</dict>
@@ -225,59 +225,7 @@
 			<key>comment</key>
 			<string>invoke sss:.. </string>
 			<key>match</key>
-			<string>(invoke)\s*([0-9a-zA-Z\.]*)</string>
-			<key>name</key>
-			<string>keyword.invoketype</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.verbs.cobol</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.verbs.cobol</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.verbs.cobol</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.source.cobol</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>set address of:.. </string>
-			<key>match</key>
-			<string>\b(?&lt;!-)(set)\s*(address)\s*(of)\s*([0-9a\-zA-Z\.]*)</string>
-			<key>name</key>
-			<string>keyword.invoketype</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.verbs.cobol</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.source.cobol</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>set sss:.. </string>
-			<key>match</key>
-			<string>\b(?&lt;!-)(set)\s*([0-9a\-zA-Z\.]*)</string>
+			<string>(?i:invoke)\s*([0-9a-zA-Z\.]*)</string>
 			<key>name</key>
 			<string>keyword.invoketype</string>
 		</dict>
@@ -320,6 +268,12 @@
 			<string>\b(?&lt;!-)(?i:type)\s*([0-9a-zA-Z\.]*)</string>
 			<key>name</key>
 			<string>storage.type.source.cobol</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(?&lt;!-)(?i:accept|add|address|allocate|alter|call|cancel|chain|close|commit|compute|continue|delete|disable|display|divide|enable|enter|evaluate|exhibit|exit|free|generate|go\s*to|go|goback|if|initialize|initiate|inspect|merge|set|move|multiply|open|perform|purge|raise|read|receive|release|return|rewrite|rounded|rollback|search|send|sort|start|stop|service|subtract|suppress|terminate|then|unlock|unstring|validate|write)(?=\s|\.)</string>
+			<key>name</key>
+			<string>keyword.verbs.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
