@@ -58,4 +58,14 @@ class CobolRemoveSequenceArea(sublime_plugin.TextCommand):
         if selected_region.size() == 0:
             self.view.replace(edit, sublime.Region(0, self.view.size()), text)
         else:
-            self.view.replace(edit, sublime.Region(selected_region.begin(), selected_region.end()), text)                      
+            self.view.replace(edit, sublime.Region(selected_region.begin(), selected_region.end()), text)
+
+
+class CobolFindProcedureDivision(sublime_plugin.TextCommand):
+      def run(self, edit):
+        print("CobolFindProcedureDivision")
+        proc_div_region = self.view.find('procedure\s*division', 0, sublime.IGNORECASE)
+        if not proc_div_region:
+            sublime.error_message("COBOL Procedure Division not found")
+            return
+        self.view.show(proc_div_region)

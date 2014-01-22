@@ -1,22 +1,28 @@
 [
 	{
-		"caption": "Clear COBOL Sequence Numbers",
+		"caption": "COBOL: Clear Sequence Numbers",
 		"command": "cobol_sequence_numbers_remove"
 	},
 
 	{
-		"caption": "Generate COBOL Sequence Numbers",
+		"caption": "COBOL: Generate Sequence Numbers",
 		"command": "cobol_insert_sequence_numbers"
 	},
 
 	{
-		"caption": "Add Blank COBOL Sequence Numbers",
+		"caption": "COBOL: Add Blank Sequence Numbers",
 		"command": "cobol_add_blank_sequence_area"
 	},
 
 	{
-		"caption": "Remove COBOL Sequence Area",
+		"caption": "COBOL: Remove Sequence Area",
 		"command": "cobol_remove_sequence_area"
+	},
+
+	{
+		"caption": "COBOL: goto procedure division",
+		"command": "cobol_find_procedure_division",
+		"keys" : "ctrl+kd"
 	}
 
 ]
