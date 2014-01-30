@@ -543,7 +543,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:comp-1|comp-2|comp-3|comp-x|comp-5|comp|computational|usage display|binary|pointer|occurs|any|times|blank\s*screen|blank|usage)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:comp-1|comp-2|comp-3|comp-x|comp-5|comp|computational|usage display|binary|mutex-pointer|thread-pointer|sempahore-pointer|event-pointer|procedure-pointer|pointer|occurs|any|times|blank\s*screen|blank|usage)(?=\s|\.)</string>
 			<key>name</key>
 			<string>storage.type.picture.cobol</string>
 		</dict>
