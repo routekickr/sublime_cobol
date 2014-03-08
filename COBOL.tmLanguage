@@ -8,6 +8,8 @@
 		<string>cpy</string>
 		<string>cob</string>
 		<string>dds</string>
+		<string>ss</string>
+		<string>wks</string>
 	</array>
 	<key>name</key>
 	<string>COBOL</string>
@@ -95,7 +97,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\s|^)(\-|\+)?((([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)([LlFfUuDd]|UL|ul)?(?=\s|\.|\))</string>
+			<string>(\s|^)(\-|\+)?((([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)([LlFfUuDd]|UL|ul)?(?=\s|\.|,|\))</string>
 			<key>name</key>
 			<string>constant.numeric.cobol</string>
 		</dict>
@@ -297,7 +299,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i)(?i:else|when|select|use|thru|varying|giving|remainder|tallying|through|until|execute|exhibit|returning|using|copy|replace)(?=\s)</string>
+			<string>\b(?&lt;!-)(?i)(?i:else|when|select|use|thru|varying|giving|remainder|tallying|through|until|execute|returning|using|copy|replace)(?=\s)</string>
 			<key>name</key>
 			<string>keyword.otherverbs.cobol</string>
 		</dict>
@@ -507,7 +509,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:accept|add|address|allocate|call|cancel|chain|close|commit|compute|continue|delete|disable|display|divide|enable|enter|evaluate|exhibit|exit|free|generate|go\s*to|go|goback|initialize|initiate|inspect|merge|set|move|multiply|open|perform|purge|raise|read|receive|release|return|rewrite|rounded|rollback|search|send|sort|start|service|subtract|suppress|terminate|then|unlock|unstring|validate|write)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:accept|add|address|allocate|call|cancel|chain|close|commit|compute|continue|delete|disable|display|divide|enable|enter|evaluate|exhibit|named|exit|free|generate|go\s*to|go|goback|initialize|initiate|inspect|merge|set|move|multiply|open|perform|purge|raise|read|receive|release|return|rewrite|rounded|rollback|search|send|sort|start|service|subtract|suppress|terminate|then|unlock|unstring|validate|write)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.verbs.cobol</string>
 		</dict>
