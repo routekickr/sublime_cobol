@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[       class-id ${1:${TM_FILENAME/(.*?)(\..+)/$1/}}
+           $0
+       end class]]></content>
+    <tabTrigger>cl</tabTrigger>
+    <scope>source.cobol</scope>
+    <description>class</description>
+</snippet>

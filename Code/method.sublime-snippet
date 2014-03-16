@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+*>> <summary>method ${1}</summary>
+method-id ${1}.
+    $0
+end method.
+
+]]></content>
+    <tabTrigger>md</tabTrigger>
+    <scope>source.cobol</scope>
+    <description>method-id</description>
+</snippet>

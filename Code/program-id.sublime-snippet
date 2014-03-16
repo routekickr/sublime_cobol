@@ -1,0 +1,20 @@
+<snippet>
+    <content><![CDATA[
+       program-id. ${1:${TM_FILENAME/(.*?)(\..+)/$1/}}.
+
+       environment division.
+       configuration section.
+
+       data division.
+       working-storage section.
+
+       procedure division.
+           $0
+           goback.
+
+       end program ${1:${TM_FILENAME/(.*?)(\..+)/$1/}}.]]>
+</content>
+    <tabTrigger>pr</tabTrigger>
+    <scope>source.cobol</scope>
+    <description>program-id</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+evaluate $1
+     when $2
+         $SELECTION$0
+end-evaluate]]></content>
+    <tabTrigger>ev</tabTrigger>
+    <scope>source.cobol</scope>
+    <description>evaluate</description>
+</snippet>

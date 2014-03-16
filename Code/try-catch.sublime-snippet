@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[try
+$2
+catch ${1:Exception}
+$0
+end-try]]></content>
+    <tabTrigger>tc</tabTrigger>
+    <scope>source.cobol</scope>
+    <description>try catch</description>
+</snippet>
+
