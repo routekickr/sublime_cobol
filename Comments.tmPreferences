@@ -8,6 +8,17 @@
 	<string>source.cobol</string>
 	<key>settings</key>
 	<dict>
+		<key>highlightPairs</key>
+		<array>
+			<array>
+				<string>(</string>
+				<string>)</string>
+			</array>
+			<array>
+				<string>[</string>
+				<string>]</string>
+			</array>
+		</array>
 		<key>shellVariables</key>
 		<array>
 			<dict>
@@ -16,6 +27,25 @@
 				<key>value</key>
 				<string>*&gt; </string>
 			</dict>
+		</array>
+		<key>smartTypingPairs</key>
+		<array>
+			<array>
+				<string>(</string>
+				<string>)</string>
+			</array>
+			<array>
+				<string>[</string>
+				<string>]</string>
+			</array>
+			<array>
+				<string>"</string>
+				<string>"</string>
+			</array>
+			<array>
+				<string>'</string>
+				<string>'</string>
+			</array>
 		</array>
 	</dict>
 	<key>uuid</key>
