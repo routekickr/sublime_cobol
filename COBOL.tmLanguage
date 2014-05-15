@@ -323,7 +323,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:attr-string|automatic|auto-skip|control|full|required|of|input|output|i-o|extend|file|error|exception|overflow|goto|on|procedure|through|invalid|data|normal|eop|end-of-page|returning|to|for|giving|into|by|remainder|also|not|numeric|free|depending|converting|replacing|after|before|all|leading|first|initial|reference|content|values|value|ascending|descending|key|retry|until|varying|when|equals|equal|with|no|advancing|up|down|uccurs|lock|length|delimited|count|delimiter|redefines|from|raising|status|class|upon|line|col|reporting|arithmetic|localize|program|class|interface|function|in|at||end)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:attr-string|automatic|auto-skip|control|full|required|of|input|output|i-o|extend|file|error|exception|overflow|goto|on|proceed|procedure|through|invalid|data|normal|eop|end-of-page|returning|to|for|giving|into|by|remainder|also|not|numeric|free|depending|converting|replacing|after|before|all|leading|first|initial|reference|content|values|value|ascending|descending|key|retry|until|varying|when|equals|equal|with|no|advancing|up|down|uccurs|lock|length|delimited|count|delimiter|redefines|from|raising|status|class|upon|line|col|reporting|arithmetic|localize|program|class|interface|function|in|at||end)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.identifers.cobol</string>
 		</dict>
@@ -350,7 +350,7 @@
 			<key>comment</key>
 			<string>program-id. ssss </string>
 			<key>match</key>
-			<string>(?i:program-id)\.\s*((?:[a-zA-Z][a-zA-Z0-9\-]*|[a-zA-Z]))</string>
+			<string>(?i:program-id)\.\s*((?:[a-zA-Z][a-zA-Z0-9\-_]*|[a-zA-Z]))</string>
 			<key>name</key>
 			<string>keyword.program-id.cobol</string>
 		</dict>

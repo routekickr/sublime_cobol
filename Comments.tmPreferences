@@ -8,6 +8,8 @@
 	<string>source.cobol</string>
 	<key>settings</key>
 	<dict>
+		<key>decreaseIndentPattern</key>
+		<string>^\s*(else|end-if|else\sif|end-perform).*$</string>
 		<key>highlightPairs</key>
 		<array>
 			<array>
@@ -19,6 +21,8 @@
 				<string>]</string>
 			</array>
 		</array>
+		<key>increaseIndentPattern</key>
+		<string>^\s*(else|else\sif|perform|if).*$</string>
 		<key>shellVariables</key>
 		<array>
 			<dict>
