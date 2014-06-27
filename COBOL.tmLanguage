@@ -323,7 +323,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:attr-string|automatic|auto-skip|control|full|required|of|input|output|i-o|extend|file|error|exception|overflow|goto|on|proceed|procedure|through|invalid|data|normal|eop|end-of-page|returning|to|for|giving|into|by|remainder|also|not|numeric|free|depending|converting|replacing|after|before|all|leading|first|initial|reference|content|values|value|ascending|descending|key|retry|until|varying|when|equals|equal|with|no|advancing|up|down|uccurs|lock|length|delimited|count|delimiter|redefines|from|raising|status|class|upon|line|col|reporting|arithmetic|localize|program|class|interface|function|in|at||end)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:attr-string|automatic|auto-skip|control|full|required|of|input|output|i-o|extend|file|error|exception|overflow|goto|on|proceed|procedure|through|invalid|data|normal|eop|end-of-page|returning|to|for|giving|into|by|remainder|also|not|numeric|free|depending|converting|replacing|after|before|all|leading|first|initial|reference|content|are|values|value|ascending|descending|key|retry|until|varying|when|equals|equal|with|no|advancing|up|down|uccurs|lock|length|delimited|count|delimiter|redefines|from|raising|status|class|upon|line|position|col|reporting|arithmetic|localize|program|class|interface|function|in|at||end)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.identifers.cobol</string>
 		</dict>
@@ -509,7 +509,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:accept|add|address|allocate|call|cancel|chain|close|commit|compute|continue|delete|disable|display|divide|enable|enter|evaluate|exhibit|named|exit|free|generate|go\s*to|go|goback|initialize|initiate|inspect|merge|set|move|multiply|open|perform|purge|raise|read|receive|release|return|rewrite|rounded|rollback|search|send|sort|start|service|subtract|suppress|terminate|then|unlock|string|unstring|validate|write)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:accept|add|address|allocate|call|cancel|chain|close|commit|compute|continue|delete|disable|display|bell|divide|enable|enter|evaluate|exhibit|named|exit|free|generate|go\s*to|go|goback|initialize|initiate|inspect|merge|set|move|multiply|open|perform|purge|raise|read|receive|release|return|rewrite|rounded|rollback|search|send|sort|start|service|subtract|suppress|terminate|then|unlock|string|unstring|validate|write)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.verbs.cobol</string>
 		</dict>
