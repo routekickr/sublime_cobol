@@ -23,9 +23,21 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>(?:^|\s)((?i)\$\s*set.*ilusing)(?:$|.*$)</string>
+			<key>name</key>
+			<string>keyword.control.import</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>(?:^|\s)((?i)\$\s*set)(?:$|\s.*$)</string>
 			<key>name</key>
 			<string>comment.line.set.cobol</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?:^|\s)((?i)\$\s*(?i:if|else|end|display))(?:$|\s.*$)</string>
+			<key>name</key>
+			<string>meta.preprocessor</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -119,7 +131,7 @@
 			<key>end</key>
 			<string>(?i:END-EXEC)</string>
 			<key>name</key>
-			<string>keyword.identifers.exec-sql-end-exec.cobol</string>
+			<string>meta.embedded.cobol,string.quoted,source</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -127,7 +139,15 @@
 			<key>end</key>
 			<string>(?i:END-EXEC)</string>
 			<key>name</key>
-			<string>keyword.identifers.exec-cics-end-exec.cobol</string>
+			<string>meta.embedded.cobol,string.quoted,source</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(?i:EXEC\s*ADO)</string>
+			<key>end</key>
+			<string>(?i:END-EXEC)</string>
+			<key>name</key>
+			<string>meta.embedded.cobol,string.quoted,source</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -281,7 +301,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\s|^)(?i)(?i:end class|end property|end method|end program|declare|return-code|as||stop\srun|stop)(?=\s|\.)</string>
+			<string>(\s|^)(?i)(?i:end class|end property|end method|end program|declare|return-code|as||stop\srun|stop)(?=\s|\.|$)</string>
 			<key>name</key>
 			<string>keyword.identifiers.cobol</string>
 		</dict>
