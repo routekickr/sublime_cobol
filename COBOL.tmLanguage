@@ -115,15 +115,15 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:true|false|null|nulls)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:true|false|null|nulls)(?=\s|\.|$)</string>
 			<key>name</key>
-			<string>constant.cobol</string>
+			<string>constant.language.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(?&lt;!-)(?i:zeroes|zeros|zero|spaces|space|quotes|quote|low-values|low-value|high-values|high-value)(?=\s|\.)</string>
 			<key>name</key>
-			<string>constant.figurative.cobol</string>
+			<string>constant.language.figurative.cobol</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -331,6 +331,12 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>(?i:function)\s(?i:date-to-yyyymmdd|year-to-yyyy|day-to-yyyyddd|e|variance|integer-of-date|rem|pi|factorial|sqrt|log10|fraction-part|mean|exp|log|char|day-of-integer|date-of-integer|exp10|atan|integer-part|tan|ord|sin|cos|midrange|addr|acos|asin|annuity|present-value|integer-of-day|ord-max|ord-min|random|integer-of-date|sum|sign|standard-deviation|median|reverse|abs|upper-case|lower-case|char-national|numval|mod|range|length-an|numval-c|current-date|national-of|display-of|when-compiled|integer-of-boolean)</string>
+			<key>name</key>
+			<string>support.function.cobol</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>\b(?&lt;!-)(?i:end-accept|end-add|end-sync|end-call|end-compute|end-delete|end-display|end-divide|end-evaluate|end-multiply|end-of-page|end-perform|end-read|end-receive|end-return|end-rewrite|end-search|end-start|end-string|end-subtract|end-unstring|end-write|program|class|interface|function|enum|interface)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.verbs.cobol</string>
@@ -343,7 +349,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:attr-string|automatic|auto-skip|control|full|required|of|input|output|i-o|extend|file|error|exception|overflow|goto|on|proceed|procedure|through|invalid|data|normal|eop|end-of-page|returning|to|for|giving|into|by|remainder|also|not|numeric|free|depending|converting|replacing|after|before|all|leading|first|initial|reference|content|are|values|value|ascending|descending|key|retry|until|varying|when|equals|equal|with|no|advancing|up|down|uccurs|lock|length|delimited|count|delimiter|redefines|from|raising|status|class|upon|line|position|col|reporting|arithmetic|localize|program|class|interface|function|in|at||end)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:attr-string|automatic|auto-skip|footing|next|group|indicate|page-counter|line-counter|source|control|full|required|of|input|output|i-o|extend|file|error|exception|overflow|goto|on|proceed|procedure|through|invalid|data|normal|eop|returning|to|for|giving|into|by|remainder|also|numeric|free|depending|converting|replacing|after|before|all|leading|first|initial|reference|content|are|values|value|ascending|descending|key|retry|until|varying|when|with|no|advancing|up|down|uccurs|lock|length|delimited|count|delimiter|redefines|from|raising|status|class|upon|lines|line|position|col|reporting|arithmetic|localize|program|class|interface|function|in|at|end|page)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.identifers.cobol</string>
 		</dict>
@@ -370,7 +376,7 @@
 			<key>comment</key>
 			<string>program-id. ssss </string>
 			<key>match</key>
-			<string>(?i:program-id)\.\s*((?:[a-zA-Z][a-zA-Z0-9\-_]*|[a-zA-Z]))</string>
+			<string>(?i:program-id)\.\s*((?:[a-zA-Z][a-zA-Z0-9\$\-_]*|[a-zA-Z]))</string>
 			<key>name</key>
 			<string>keyword.program-id.cobol</string>
 		</dict>
@@ -595,9 +601,9 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\s(=|&lt;|&gt;|&lt;=|&gt;=|&lt;&gt;|\+|\-|\*|\/|b-and|b-or|b-xor|b-not|b-left|b-right|and|or|not)(?=\s|\.)</string>
+			<string>\s(?i:=|&lt;|&gt;|&lt;=|&gt;=|&lt;&gt;|\+|\-|\*|\/|b-and|b-or|b-xor|b-not|b-left|b-right|and|or|not|equals|equal)(?=\s|\.)</string>
 			<key>name</key>
-			<string>keyword.operator.cobol</string>
+			<string>keyword.operator.comparison.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>

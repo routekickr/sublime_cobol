@@ -9,7 +9,7 @@
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
-		<string>^\s*(else|end-if|else\sif|end-perform).*$</string>
+		<string>^\s*(else|end-if|else\sif|end-perform|end-add|end-call|end-delete|end-divide|end-evaluate|end-read|end-rewrite|end-start|end-string|end-subtract|end-unstring|end-write).*$</string>
 		<key>highlightPairs</key>
 		<array>
 			<array>
@@ -22,7 +22,7 @@
 			</array>
 		</array>
 		<key>increaseIndentPattern</key>
-		<string>^\s*(else|else\sif|perform|if).*$</string>
+		<string>^\s*(else|else\sif|perform|if|add|calldelete|divide|evaluate|read|rewrite|start|string|subtract|unstring|write).*$</string>
 		<key>shellVariables</key>
 		<array>
 			<dict>
