@@ -1,0 +1,13 @@
+[{
+    "keys": ["ctrl+/"],
+    "command": "cobol_comment_toggle",
+    "args": {
+        "block": false
+    }
+}, {
+    "keys": ["ctrl+shift+/"],
+    "command": "cobol_comment_toggle",
+    "args": {
+        "block": true
+    }
+}, ]
