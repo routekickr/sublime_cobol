@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[       valuetype-id ${1:${TM_FILENAME/(.*?)(\..+)/$1/}} ${2:public}.
+           01 item string ${2:public}.
+
+           method-id new ${2:public}.
+           procedure division.
+             $0
+           end method.
+
+       end valuetype.]]></content>
+    <tabTrigger>va</tabTrigger>
+    <scope>source.cobol</scope>
+    <description>valuetype</description>
+</snippet>

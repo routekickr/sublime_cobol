@@ -1,2 +1,5 @@
 [
+	{ "keys": ["super+forward_slash"], "command": "cobol_comment_toggle", "args": { "block": false } },
+	{ "keys": ["super+alt+forward_slash"], "command": "cobol_comment_toggle", "args": { "block": true } },
+
 ]

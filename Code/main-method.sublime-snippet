@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+*>> <summary>method main</summary>
+method-id main public static.
+procedure division using
+                    by value args as string occurs any.
+    $0
+end method.
+
+]]></content>
+    <tabTrigger>main</tabTrigger>
+    <scope>source.cobol</scope>
+    <description>method-id (main)</description>
+</snippet>

@@ -17,7 +17,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>(^[0-9 a-zA-Z\*][0-9 a-zA-Z\*][0-9 a-zA-Z\*][0-9 a-zA-Z\*][0-9 a-zA-Z\*][0-9 a-zA-Z\*][\*/].*$)</string>
+			<string>(^[0-9 a-zA-Z\*\-][0-9 a-zA-Z\\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][\*/].*$)</string>
 			<key>name</key>
 			<string>comment.line.set.cobol</string>
 		</dict>
@@ -103,7 +103,7 @@
 			<key>comment</key>
 			<string>simple numerics in () and []</string>
 			<key>match</key>
-			<string>(?&lt;=(\(|\[))((\-\+)*[0-9 \.\+\-\*\/]+)(?=(\)|\]))</string>
+			<string>(?&lt;=(\(|\[))((\-\+)*[0-9 ,\.\+\-\*\/]+)(?=(\)|\]))</string>
 			<key>name</key>
 			<string>constant.numeric.cobol</string>
 		</dict>
@@ -301,7 +301,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\s|^)(?i)(?i:end class|end property|end method|end program|declare|return-code|as||stop\srun|stop)(?=\s|\.|$)</string>
+			<string>(\s|^)(?i)(?i:end class|end property|end if|exit method|method|end program|declare|return-code|as||stop\srun|stop)(?=\s|\.|$)</string>
 			<key>name</key>
 			<string>keyword.identifiers.cobol</string>
 		</dict>
@@ -337,13 +337,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:end-accept|end-add|end-sync|end-call|end-compute|end-delete|end-display|end-divide|end-evaluate|end-multiply|end-of-page|end-perform|end-read|end-receive|end-return|end-rewrite|end-search|end-start|end-string|end-subtract|end-unstring|end-write|program|class|interface|function|enum|interface)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:end-accept|end-add|end-sync|end-call|end-compute|end-delete|end-display|end-divide|end-if|end-evaluate|end-multiply|end-of-page|end-perform|end-read|end-receive|end-return|end-rewrite|end-search|end-start|end-string|end-subtract|end-unstring|end-write|program|class|interface|function|enum|interface)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.verbs.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?:by value|by reference|by content|property-value)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?:by value|by reference|by content|property-value)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.other.cobol</string>
 		</dict>
@@ -391,13 +391,13 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.cobol</string>
+					<string>entity.name.class.cobol</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>class-id ssss </string>
 			<key>match</key>
-			<string>(?i:class-id|inherits)\.\s*((?:[a-zA-Z][a-zA-Z0-9\-\.]*|[a-zA-Z]))</string>
+			<string>(?i:class-id|inherits|implements)\.\s*((?:[a-zA-Z][a-zA-Z0-9\-\.]*|[a-zA-Z]))</string>
 			<key>name</key>
 			<string>keyword.class-id.cobol</string>
 		</dict>
@@ -412,13 +412,13 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.cobol</string>
+					<string>entity.name.class.cobol</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>class-id ssss </string>
 			<key>match</key>
-			<string>(?i:class-id|inherits)\s*((?:[a-zA-Z][a-zA-Z0-9\-\.]*|[a-zA-Z]))</string>
+			<string>(?i:class-id|inherits|implements)\s*((?:[a-zA-Z][a-zA-Z0-9\-\.]*|[a-zA-Z]))</string>
 			<key>name</key>
 			<string>keyword.class-id.cobol</string>
 		</dict>
@@ -433,18 +433,13 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.verbs.cobol</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.source.cobol</string>
+					<string>keyword.identifers.cobol</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>invoke type sss:.. </string>
 			<key>match</key>
-			<string>(?i:invoke)\s*(?i:type)\s*([0-9a-zA-Z\.]*)</string>
+			<string>(?i:invoke)\s*(?i:type)</string>
 			<key>name</key>
 			<string>keyword.invoketype</string>
 		</dict>
@@ -456,19 +451,9 @@
 					<key>name</key>
 					<string>variable.language.self.cobol</string>
 				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.verbs.cobol</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.source.cobol</string>
-				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?i:self)::\s*([0-9a-zA-Z\.]*)</string>
+			<string>(?i:self)::</string>
 			<key>name</key>
 			<string>keyword.invoke.self</string>
 		</dict>
@@ -483,13 +468,13 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.source.cobol</string>
+					<string>support.type.cobol</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>invoke sss:.. </string>
 			<key>match</key>
-			<string>(?i:invoke)\s*([0-9a-zA-Z\.]*)</string>
+			<string>(?i:invoke)\s*([0-9a-zA-Z\-\.]*)</string>
 			<key>name</key>
 			<string>keyword.invoketype</string>
 		</dict>
@@ -504,13 +489,13 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.source.cobol</string>
+					<string>support.type.cobol</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>invoke sss:.. </string>
 			<key>match</key>
-			<string>(::)\s*([0-9a-zA-Z\.]*)</string>
+			<string>(::)\s*([0-9a-zA-Z\-\.]*)</string>
 			<key>name</key>
 			<string>keyword.invoketype</string>
 		</dict>
@@ -535,7 +520,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:accept|add|address|allocate|call|cancel|chain|close|commit|compute|continue|delete|disable|display|bell|divide|enable|enter|evaluate|exhibit|named|exit|free|generate|go\s*to|go|goback|initialize|initiate|inspect|merge|set|move|multiply|open|perform|purge|raise|read|receive|release|return|rewrite|rounded|rollback|search|send|sort|start|service|subtract|suppress|terminate|then|unlock|string|unstring|validate|write)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:accept|add|address|allocate|call|cancel|chain|close|commit|compute|continue|delete|disable|display|bell|divide|enable|enter|if|evaluate|exhibit|named|exit|free|generate|go\s*to|go|goback|initialize|initiate|inspect|merge|set|move|multiply|open|perform|purge|raise|read|receive|release|return|rewrite|rounded|rollback|search|send|sort|start|service|subtract|suppress|terminate|then|unlock|string|unstring|validate|write)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.verbs.cobol</string>
 		</dict>
@@ -571,7 +556,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:comp-1|comp-2|comp-3|comp-x|comp-5|comp|computational|usage display|binary|mutex-pointer|thread-pointer|sempahore-pointer|event-pointer|procedure-pointer|pointer|occurs|any|times|blank\s*screen|blank|usage)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:computational-1|comp-1|computational-2|comp-2|computational-3|comp-3|computational-4|comp-4|computational-x|comp-x|computational-5|comp-5|computational-6|comp-6|computational-n|comp-n|packed-decimal|index|float|double|signed-short|unsigned-short|signed-int|unsigned-int|signed-long|unsigned-long|comp|computational|usage\sis\sdisplay|usage\sis\sfont|usage display|binary|mutex-pointer|thread-pointer|sempahore-pointer|event-pointer|procedure-pointer|pointer|handle|window|subwindow|control-type|thread|menu|variant|layout-manager|occurs|typedef|any|times|blank\s*screen|blank|usage\sis|is\spartial|usage|just|right)(?=\s|\.)</string>
 			<key>name</key>
 			<string>storage.type.picture.cobol</string>
 		</dict>
@@ -583,19 +568,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\s|^)(?i)if\s+((not)\s+)(then)</string>
-			<key>name</key>
-			<string>keyword.verbs.cobol</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(\s|^)(?i)(?:if|else|then|end-if)\b</string>
-			<key>name</key>
-			<string>keyword.control.cobol</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(?&lt;!-)(?i:internal|public|protected|private|static|new|abstract|override|readonly)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:internal|public|protected|private|static|new|abstract|override|readonly|property)(?=\s|\.)</string>
 			<key>name</key>
 			<string>storage.modifier.cobol</string>
 		</dict>
@@ -613,9 +586,9 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:SYSIN|SYSIPT|SYSOUT|SYSLIST|SYSLST|PRINTER|SYSERR|CONSOLE|C01|C02|C03|C04|C05|C06|C07|C08|C09|C10|C11|C12|FORMFEED|SWITCH-1|SWITCH-2|SWITCH-3|SWITCH-4|SWITCH-5|SWITCH-6|SWITCH-7|SWITCH-8|next)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:sysin|sysipt|sysout|syslist|syslst|printer|syserr|console|c01|c02|c03|c04|c05|c06|c07|c08|c09|c10|c11|c12|formfeed|switch-1|switch-2|switch-3|switch-4|switch-5|switch-6|switch-7|switch-8|next)(?=\s|\.)</string>
 			<key>name</key>
-			<string>support.cobol</string>
+			<string>support.type.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
