@@ -95,7 +95,6 @@ class CobolCommentToggleCommand(sublime_plugin.TextCommand):
         return lineContents
 
     def run(self, edit, block):  
-        print('SPG - Skipping -> '+self.view.settings().get('syntax'))
         if self.view.settings().get('syntax') != 'Packages/COBOL Syntax/COBOL.tmLanguage':
                 self.view.run_command("toggle_comment", {"block": block})
                 return
