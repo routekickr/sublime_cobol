@@ -41,6 +41,12 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>(?:^|\s)&gt;&gt;(?i:if|else|elif|end-if)(?:$|\s.*$)</string>
+			<key>name</key>
+			<string>meta.preprocessor</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>(^[0-9][0-9][0-9][0-9][0-9][0-9])</string>
 			<key>name</key>
 			<string>comment.line.rem.cobol</string>
@@ -56,6 +62,18 @@
 			<string>(\*&gt;.*$)</string>
 			<key>name</key>
 			<string>comment.line.rem.cobol</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>[hHxX]'\h*'</string>
+			<key>name</key>
+			<string>constant.numeric.integer.hexadecimal.cobol</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>[hHxX]'.*'</string>
+			<key>name</key>
+			<string>invalid.illegal.hexadecimal.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -295,13 +313,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:identification\s*division|identification|enum-id|property-id|getter|setter|valuetype-id|author|date-written|date-compiled|entry|function-id|attribute|interface-id|method-id|factory|ctl|class-control|options|environment\s*division|environment|configuration\s*section|configuration|decimal-point|call-convention|source-computer|object-computer|special-names|repository|input-output\s*section|input-output|file\s*section|file-control|select|optional|i-o-control|data\s*division|working-storage\s*section|working-storage|section|local-storage|linkage\s*section|linkage|communication|report|screen\s*section|fd|rd|cd|sd|printing|procedure\s*division|procedure|declaratives|installation|security|based-storage|size|font)\b[^-]</string>
+			<string>\b(?&lt;!-)(?i:identification\s*division|identification|enum-id|property-id|getter|setter|valuetype-id|author|date-written|date-compiled|entry|function-id|attribute|interface-id|method-id|factory|ctl|class-control|options|environment\s*division|environment|configuration\s*section|configuration|decimal-point|call-convention|source-computer|object-computer|special-names|repository|input-output\s*section|input-output|file\s*section|file-control|select|optional|i-o-control|data\s*division|working-storage\s*section|working-storage|section|local-storage|linkage\s*section|linkage|communication|report|screen\s*section|fd|rd|cd|sd|printing|procedure\s*division|procedure|debugging|declaratives|installation|security|based-storage|size|font)\b[^-]</string>
 			<key>name</key>
 			<string>keyword.identifiers.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\s|^)(?i)(?i:end class|end property|end if|exit method|method|end program|declare|return-code|as||stop\srun|stop)(?=\s|\.|$)</string>
+			<string>(\s|^)(?i)(?i:end class|end property|end if|exit method|method|end program|create|reset|instance|delegate|declare|debug-line|debug-name|debug-contents|return-code|as||stop\srun|stop)(?=\s|\.|$)</string>
 			<key>name</key>
 			<string>keyword.identifiers.cobol</string>
 		</dict>
@@ -349,7 +367,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:attr-string|automatic|auto-skip|footing|next|group|indicate|page-counter|line-counter|source|control|full|required|of|input|output|i-o|extend|file|error|exception|overflow|goto|on|proceed|procedure|through|invalid|data|normal|eop|returning|to|for|giving|into|by|remainder|also|numeric|free|depending|converting|replacing|after|before|all|leading|first|initial|reference|content|are|values|value|ascending|descending|key|retry|until|varying|when|with|no|advancing|up|down|uccurs|lock|length|delimited|count|delimiter|redefines|from|raising|status|class|upon|lines|line|position|col|reporting|arithmetic|localize|program|class|interface|function|in|at|end|page)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:attr-string|automatic|auto-skip|footing|next|group|indicate|page-counter|line-counter|source|control|full|required|of|input|output|i-o|extend|file|error|exception|overflow|goto|on|proceed|procedures|procedure|through|invalid|data|normal|eop|returning|to|for|giving|into|by|remainder|also|numeric|free|depending|converting|replacing|after|before|all|leading|first|recursive|initial|reference|content|are|like|format\stime|values|value|ascending|descending|key|retry|until|varying|when|with|no|advancing|up|down|uccurs|lock|length|delimited|count|delimiter|redefines|from|raising|status|class|upon|lines|line|position|col|reporting|arithmetic|localize|program|class|interface|function|in|at|end|page)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.identifers.cobol</string>
 		</dict>
@@ -474,7 +492,7 @@
 			<key>comment</key>
 			<string>invoke sss:.. </string>
 			<key>match</key>
-			<string>(?i:invoke)\s*([0-9a-zA-Z\-\.]*)</string>
+			<string>(?i:invoke)\s*([0-9a-zA-Z_\-\.]*)</string>
 			<key>name</key>
 			<string>keyword.invoketype</string>
 		</dict>
@@ -495,7 +513,7 @@
 			<key>comment</key>
 			<string>invoke sss:.. </string>
 			<key>match</key>
-			<string>(::)\s*([0-9a-zA-Z\-\.]*)</string>
+			<string>(::)\s*([0-9a-zA-Z_\-\.]*)</string>
 			<key>name</key>
 			<string>keyword.invoketype</string>
 		</dict>
@@ -550,7 +568,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:picture|pic)\s+[-+$9aAbBsSnNxXzZ/,.]*</string>
+			<string>(?i:picture|pic)\s+[-+$9aAbBsSnNxXzZ/,.vV]*</string>
 			<key>name</key>
 			<string>storage.type.picture.cobol</string>
 		</dict>
