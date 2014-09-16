@@ -331,7 +331,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(\s|^)(?i)(?i:try|finally|catch|end-try|throw)\b</string>
+			<string>(\s|^)(?i)(?i:try|finally|catch|end-try|throw)(?=\s|\.|$)</string>
 			<key>name</key>
 			<string>keyword.control.catch-exception.cobol</string>
 		</dict>
