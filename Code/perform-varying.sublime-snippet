@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+perform ${1:paragraph-name} varying ${2:field-1}
+ from ${3:value-1} by ${4:value-2}
+ until ${5:condition}
+]]></content>
+	<tabTrigger>perform</tabTrigger>
+	<scope>source.cobol</scope>
+</snippet>

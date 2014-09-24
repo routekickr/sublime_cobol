@@ -1,0 +1,33 @@
+<snippet>
+	<content><![CDATA[
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ${TM_FILENAME/(.*)[.](.*)/$1/g}.
+       AUTHOR. ${TM_FULLNAME:author}.
+       INSTALLATION. ${1:where}.
+       DATE-WRITTEN. ${2:today}.
+       DATE-COMPILED. ${3:today}.
+       SECURITY.
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       SOURCE-COMPUTER. ${4:pc}.
+       OBJECT-COMPUTER. ${4:pc}.
+       SPECIAL-NAMES.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+       DATA DIVISION.
+        FILE SECTION.
+        WORKING-STORAGE SECTION.
+        LINKAGE SECTION.
+       PROCEDURE DIVISION.
+        DECLARATIVES.
+        END DECLARATIVES.
+        main-processing SECTION.
+         mainline-paragraph.
+             ${0}
+             STOP RUN.
+       END PROGRAM ${TM_FILENAME/(.*)[.](.*)/$1/g}.
+
+]]></content>
+	<tabTrigger>identification</tabTrigger>
+	<scope>source.cobol</scope>
+</snippet>

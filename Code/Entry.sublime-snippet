@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+entry "${1:ep${TM_FILENAME/\..*//}}".
+	$SELECTION$0	
+	goback.
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ent</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.cobol</scope> 
+</snippet>
