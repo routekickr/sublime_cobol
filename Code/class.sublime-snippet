@@ -1,8 +1,15 @@
 <snippet>
-    <content><![CDATA[       class-id ${1:${TM_FILENAME/(.*?)(\..+)/$1/}}
+    <content><![CDATA[
+       class-id ${1:${TM_FILENAME/(.*?)(\..+)/$1/}} public.
+
+       method-id new public.
+       procedure division.
            $0
+           exit method.
+       end-method.
+
        end class]]></content>
-    <tabTrigger>cl</tabTrigger>
+    <tabTrigger>class-id</tabTrigger>
     <scope>source.cobol</scope>
-    <description>class</description>
+    <description>class with ctor</description>
 </snippet>

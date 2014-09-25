@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+           inspect ${1} converting
+               'abcdefghijklmnopqrstuvwxyz' to
+               'ABCDEFGHIJKLMNOPQRSTUVWXYZ' 
+]]></content>
+	<tabTrigger>inspect</tabTrigger>
+	<scope>source.cobol</scope>
+</snippet>

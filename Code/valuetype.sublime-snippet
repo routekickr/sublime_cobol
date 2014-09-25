@@ -1,5 +1,6 @@
 <snippet>
-    <content><![CDATA[       valuetype-id ${1:${TM_FILENAME/(.*?)(\..+)/$1/}} ${2:public}.
+    <content><![CDATA[
+       valuetype-id ${1:${TM_FILENAME/(.*?)(\..+)/$1/}} ${2:public}.
            01 item string ${2:public}.
 
            method-id new ${2:public}.

@@ -1,0 +1,16 @@
+<snippet>
+    <content><![CDATA[
+01 ${2:_prop} ${3:binary-long} private.
+method-id. get property #${1:Prop}.
+procedure division returning ret as ${3:binary-long}.
+    set ret to ${2:_prop}
+end method.
+method-id. set property #${1:Prop}.
+procedure division using by value val as ${3:binary-long}.
+    set ${2:_prop} to 0
+end method.
+]]></content>
+    <tabTrigger>property</tabTrigger>
+    <scope>source.cobol</scope>
+    <description>set/get property</description>
+</snippet>

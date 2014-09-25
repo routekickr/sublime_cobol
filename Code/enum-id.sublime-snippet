@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+*>> <summary>enum-id ${1}</summary>
+enum-id. ${1} as "Status".
+    78 ${2:Item}  value ${3:1}.
+end enum ${1}.
+]]></content>
+    <tabTrigger>enum-id</tabTrigger>
+    <scope>source.cobol</scope>
+    <description>enum-id</description>
+</snippet>

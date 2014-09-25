@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+       entry "${1:ep${TM_FILENAME/\..*//}}".
+           $SELECTION$0	
+           goback.
+]]></content>
+	<tabTrigger>entry</tabTrigger>
+	<scope>source.cobol</scope> 
+</snippet>
