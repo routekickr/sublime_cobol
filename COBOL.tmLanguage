@@ -65,25 +65,25 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>[hHxX]'\h*'</string>
+			<string>([nN][xX]|[hHxX])'\h*'</string>
 			<key>name</key>
 			<string>constant.numeric.integer.hexadecimal.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>[hHxX]'.*'</string>
+			<string>([nN][xX]|[hHxX])'.*'</string>
 			<key>name</key>
 			<string>invalid.illegal.hexadecimal.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>[hHxX]"\h*"</string>
+			<string>([nN][xX]|[hHxX])"\h*"</string>
 			<key>name</key>
 			<string>constant.numeric.integer.hexadecimal.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>[hHxX]".*"</string>
+			<string>([nN][xX]|[hHxX])".*"</string>
 			<key>name</key>
 			<string>invalid.illegal.hexadecimal.cobol</string>
 		</dict>
@@ -544,31 +544,31 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:picture|pic)\s+[-+sS$9aAbBxXnNzZ/,.]*\([0-9]*\)[vV\.][-+s$9aAbBsSnNxXzZ/,]*\([0-9]*\)</string>
+			<string>(?i:picture\s+is|picture|pic\s+is|pic)\s+[-+sS\*$09aAbBxXpPnNzZ/,.]*\([0-9]*\)[vV\.][-+s\*$09aAbBsSnNxXzZ/,]*\([0-9]*\)</string>
 			<key>name</key>
 			<string>storage.type.picture.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:picture|pic)\s+[-+sS$9aAbBsSnNxXzZ/,.]*\([0-9]*\)[Vv\.][-+s$9aAbBsSnNxXzZ/,]*</string>
+			<string>(?i:picture\s+is|picture|pic\s+is|pic)\s+[-+sS\*$09aAbBsSnpPNxXzZ/,.]*\([0-9]*\)[Vv\.][-+s\*0$9aAbBsSnNxpPXzZ/,]*</string>
 			<key>name</key>
 			<string>storage.type.picture.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:picture|pic)\s+[-+sS$9aAbBsSnNxXzZ/,.]*\([0-9]*\)</string>
+			<string>(?i:picture\s+is|picture|pic\s+is|pic)\s+[-+sS\*$09aAbBsSnpNNxXzZ/,.]*\([0-9]*\)</string>
 			<key>name</key>
 			<string>storage.type.picture.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:picture|pic)\s+[sS]?[9aAbBsSnNxXzZ]*[Vv][9aAxbXzZ]*</string>
+			<string>(?i:picture\s+is|picture|pic\s+is|pic)\s+[sS]?[9aAbBsSnNxXzZ]*[Vv][9aAxbXzZ]*</string>
 			<key>name</key>
 			<string>storage.type.picture.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:picture|pic)\s+[-+$9aAbBsSnNxXzZ/,.vV]*</string>
+			<string>(?i:picture\s+is|picture|pic\s+is|pic)\s+[-+\*$9aAbBsSnpPNxXzZ/,.vV]*</string>
 			<key>name</key>
 			<string>storage.type.picture.cobol</string>
 		</dict>
