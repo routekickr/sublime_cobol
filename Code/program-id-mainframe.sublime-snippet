@@ -2,15 +2,15 @@
 	<content><![CDATA[
        IDENTIFICATION DIVISION.
        PROGRAM-ID. ${TM_FILENAME/(.*)[.](.*)/$1/g}.
-       AUTHOR. ${TM_FULLNAME:author}.
-       INSTALLATION. ${1:where}.
-       DATE-WRITTEN. ${2:today}.
-       DATE-COMPILED. ${3:today}.
+       AUTHOR. ${1:${TM_FULLNAME:author}}.
+       INSTALLATION. ${2:where}.
+       DATE-WRITTEN. ${3:dd/mm/yyyy}.
+       DATE-COMPILED.${4:${3}}.
        SECURITY.
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
-       SOURCE-COMPUTER. ${4:pc}.
-       OBJECT-COMPUTER. ${4:pc}.
+       SOURCE-COMPUTER. ${5:pc}.
+       OBJECT-COMPUTER. ${6:${5}}.
        SPECIAL-NAMES.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
@@ -29,5 +29,6 @@
 
 ]]></content>
 	<tabTrigger>identification</tabTrigger>
+ 	<description>Template for mainframe</description>
 	<scope>source.cobol</scope>
 </snippet>

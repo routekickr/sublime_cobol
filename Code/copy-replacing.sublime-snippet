@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+COPY "${1:subprog.cpy}"
+    REPLACING ==${2:()}== BY ==${3:lnk-}==.
+]]></content>
+	<tabTrigger>copy</tabTrigger>
+	<scope>source.cobol</scope>
+</snippet>

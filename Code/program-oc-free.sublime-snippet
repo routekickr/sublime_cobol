@@ -1,0 +1,45 @@
+<snippet>
+	<content><![CDATA[
+       >>SOURCE FORMAT IS FREE
+*> *********************************************************************
+*> Author:     ${1:${TM_FULLNAME:author}}.
+*> Date:       ${2:dd/mm/yyyy}
+*> Purpose:    ${3}
+*> Tectonics:  cobc -freea ${TM_FILENAME}
+*> *********************************************************************
+identification division.
+program-id. ${TM_FILENAME/(.*)[.](.*)/$1/g}.
+
+
+environment division.
+configuration section.
+
+input-output section.
+file-control.
+    select
+        assign to
+        organization is
+    .
+
+data division.
+file section.
+fd .
+    01 .
+
+working-storage section.
+
+local-storage section.
+
+linkage section.
+
+screen section.
+
+procedure division.
+    ${0}
+goback.
+end program ${TM_FILENAME/(.*)[.](.*)/$1/g}.
+]]></content>
+	<tabTrigger>identification</tabTrigger>
+	<description>Template for free format (OC)</description>
+	<scope>source.cobol</scope>
+</snippet>

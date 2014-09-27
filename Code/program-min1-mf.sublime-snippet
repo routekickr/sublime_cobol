@@ -1,13 +1,6 @@
 <snippet>
     <content><![CDATA[
        program-id. ${1:${TM_FILENAME/(.*?)(\..+)/$1/}}.
-
-       environment division.
-       configuration section.
-
-       data division.
-       working-storage section.
-
        procedure division.
            $0
            goback.
@@ -16,5 +9,5 @@
 </content>
     <tabTrigger>identification</tabTrigger>
     <scope>source.cobol</scope>
-    <description>Template for program (MF)</description>
+    <description>Minimum template (MF)</description>
 </snippet>

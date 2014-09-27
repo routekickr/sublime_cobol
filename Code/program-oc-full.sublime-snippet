@@ -1,0 +1,201 @@
+<snippet>
+	<content><![CDATA[
+GNU    >>SOURCE FORMAT IS FIXED
+Cobol *> ***************************************************************
+      *> Author:    ${1:${TM_FULLNAME:author}}.
+      *> Date:      ${2:dd/mm/yyyy}
+      *> Purpose:   ${3}
+      *> Tectonics: cobc -x -g ${TM_FILENAME}
+      *>            set OB_SET_DEBUG=Y && ${TM_FILENAME/(.*?)(\..+)/$1/}}.exe
+      *>            COB_SET_DEBUG=Y ./${TM_FILENAME/(.*?)(\..+)/$1/}}
+      *> ***************************************************************
+  id   identification division.
+       program-id. ${1:${TM_FILENAME/(.*?)(\..+)/$1/}}.
+
+ site  environment division.
+       configuration section.
+       source-computer. posix with debugging mode.
+
+       repository.
+           function all intrinsic.
+
+       input-output section.
+       file-control.
+           select standard-in
+           assign to keyboard
+           organization is line sequential
+           status is stdin-file-status
+           .
+
+           select standard-out
+           assign to display
+           organization is line sequential
+           status is stdout-file-status
+           .
+
+ data  data division.
+       file section.
+       fd standard-in.
+           01 stdin-line       pic x(32768).
+       fd standard-out.
+           01 stdout-line      pic x(32768).
+
+       working-storage section.
+       01 stdin-file-status.
+          05 stdin-status      pic 99.
+          05 stdin-substatus   pic 99.
+
+       01 stdout-file-status.
+          05 stdout-status     pic 99.
+          05 stdout-substatus  pic 99.
+
+       01 countdown            pic 99.
+       01 display-count        pic z9.
+       01 joke-limiter         pic x     value low-value.
+          88 refrain                     value high-value.
+
+       local-storage section.
+       linkage section.
+       report section.
+       screen section.
+
+      *> ***************************************************************
+ code  procedure division.
+ decl  declaratives.
+
+       helpful-debug section.
+           use for debugging on cleanse.
+       cleanse-debug.
+           display
+               "DEBUG: cleansing input: " trim(stdin-line trailing)
+               upon syserr
+           end-display
+       .
+
+       bark-on-stdin-errors section.
+           use after standard error on standard-in.
+       bark-stdin.
+           display
+               "Something bad happened on KEYBOARD" upon syserr
+           end-display
+       .
+
+       bark-on-stdout-errors section.
+           use after standard error on standard-out.
+       bark-stdout.
+           display
+               "Something bad happened on DISPLAY" upon syserr
+           end-display
+       .
+
+       end declaratives.
+
+ main  mainline section.
+       ${0}
+       ready trace
+
+       open input standard-in
+       if stdin-status greater than 10
+           display "soft-exception" end-display
+       end-if
+
+       open output standard-out
+       if stdout-status greater than 10
+           display "soft-exception" end-display
+       end-if
+
+       reset trace
+
+       perform until stdin-status greater than 9
+           move "What is your command? " to stdout-line
+           write stdout-line end-write
+           if stdout-status greater than 10
+               perform soft-exception
+           end-if
+      
+           read standard-in
+               at end
+                   exit perform
+           end-read
+           if stdin-status greater than 10
+               perform soft-exception
+           end-if
+
+           perform cleanse
+
+           evaluate stdin-line also true
+               when "help"         also any
+                   display "We all want a little help" end-display
+               when "quit"         also any
+                   display
+                       "I know you want to quit, but I'm being"
+                       " unfriendly; type 'exit', you user you"
+                   end-display
+               when "exit"         also refrain
+                   display "fine, leaving now" end-display
+                   exit perform
+               when "exit"         also any 
+                   display "Ha!  No quit for you" end-display
+                   display
+                       "Preparing the nuclear launch in"
+                   end-display
+                   perform varying countdown from 10 by -1
+                       until countdown equal zero
+                       move countdown to display-count
+                       display
+                           display-count "... " with no advancing
+                       end-display
+                       call
+                           "fflush" using NULL
+                           on exception continue
+                       end-call
+                       call "C$SLEEP" using 1 end-call
+                   end-perform
+                   display "just kidding" end-display
+                   set refrain to true
+               when other
+                   display "try 'help'" end-display
+           end-evaluate
+       end-perform
+
+ done  goback.
+
+ aide  helper section.
+       cleanse.
+           inspect stdin-line replacing all '"' by space
+           move substitute(stdin-line, "'", space) to stdin-line
+           move lower-case(stdin-line) to stdin-line
+           move trim(stdin-line) to stdin-line
+       .
+
+      *> ***************************************************************
+ warn  soft-exception.
+           display
+               "Exception-file:      " exception-file
+               upon syserr
+           end-display
+           display
+               "Exception-status:    " exception-status
+               upon syserr
+           end-display
+           display
+               "Exception-location:  " exception-location
+               upon syserr
+           end-display
+           display
+               "Exception-statement: " exception-statement
+               upon syserr
+           end-display
+       .
+
+ fail  hard-exception.
+           perform soft-exception
+           stop run returning exception-status
+       .
+
+ unit  end program ${1:${TM_FILENAME/(.*?)(\..+)/$1/}}.
+]]></content>
+	<tabTrigger>identification</tabTrigger>
+	<description>Full template (OC)</description>
+	<scope>source.cobol</scope>
+</snippet>
