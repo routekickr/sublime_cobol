@@ -6,7 +6,7 @@
        procedure division.
            $0
            exit method.
-       end-method.
+       end method.
 
        end class]]></content>
     <tabTrigger>class-id</tabTrigger>
