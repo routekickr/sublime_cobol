@@ -149,7 +149,14 @@
 			<key>end</key>
 			<string>(?i:END-EXEC)</string>
 			<key>name</key>
-			<string>meta.embedded.cobol,string.quoted,source</string>
+			<string>string.quoted.cobol</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.sql</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -157,7 +164,7 @@
 			<key>end</key>
 			<string>(?i:END-EXEC)</string>
 			<key>name</key>
-			<string>meta.embedded.cobol,string.quoted,source</string>
+			<string>string.quoted.cobol</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -165,7 +172,33 @@
 			<key>end</key>
 			<string>(?i:END-EXEC)</string>
 			<key>name</key>
-			<string>meta.embedded.cobol,string.quoted,source</string>
+			<string>string.quoted.cobol</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.sql</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(?i:EXEC\s*HTML)</string>
+			<key>end</key>
+			<string>(?i:END-EXEC)</string>
+			<key>name</key>
+			<string>string.quoted.cobol</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>texthtml.basic</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>text.html.basic</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -313,7 +346,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:identification\s*division|identification|enum-id|property-id|getter|setter|valuetype-id|author|date-written|date-compiled|entry|function-id|attribute|interface-id|method-id|factory|ctl|class-control|options|environment\s*division|environment-name|environment-value|environment|configuration\s*section|configuration|decimal-point|call-convention|source-computer|object-computer|special-names|picture\s*symbol|currency\s*sign|currency|repository|input-output\s*section|input-output|file\s*section|file-control|select|optional|i-o-control|data\s*division|working-storage\s*section|working-storage|section|local-storage|linkage\s*section|linkage|communication|report|screen\s*section|fd|rd|cd|sd|printing|procedure\s*division|procedure|debugging|declaratives|installation|security|based-storage|size|font)\b[^-]</string>
+			<string>\b(?&lt;!-)(?i:id\s*division|identification\s*division|identification|enum-id|property-id|getter|setter|valuetype-id|author|date-written|date-compiled|entry|function-id|attribute|interface-id|method-id|factory|ctl|class-control|options|environment\s*division|environment-name|environment-value|environment|configuration\s*section|configuration|decimal-point|call-convention|source-computer|object-computer|special-names|cursor\s*is|update|picture\s*symbol|currency\s*sign|currency|repository|input-output\s*section|input-output|file\s*section|file-control|select|optional|i-o-control|data\s*division|working-storage\s*section|working-storage|section|local-storage|linkage\s*section|linkage|communication|report|screen\s*section|fd|rd|cd|sd|printing|procedure\s*division|procedure|debugging|declaratives|installation|remarks|security|based-storage|size|font)\b[^-]</string>
 			<key>name</key>
 			<string>keyword.identifiers.cobol</string>
 		</dict>
@@ -337,7 +370,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i)(?i:else|when|select|use|thru|varying|giving|remainder|tallying|through|until|execute|returning|using|copy|replace)(?=\s)</string>
+			<string>\b(?&lt;!-)(?i)(?i:else|when|select|use|thru|varying|giving|remainder|tallying|through|until|execute|returning|using|\+\+include|copy|replace)(?=\s)</string>
 			<key>name</key>
 			<string>keyword.otherverbs.cobol</string>
 		</dict>
@@ -367,7 +400,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:attr-string|automatic|auto-skip|footing|next|group|indicate|page-counter|linage-counter|linage|line-counter|source|control|full|required|of|input|output|i-o|extend|file|error|exception|overflow|goto|on|proceed|procedures|procedure|through|invalid|data|normal|eop|returning|to|for|giving|into|by|remainder|also|numeric|free|depending|converting|replacing|after|before|all|leading|first|recursive|initialized|global|initial|reference|content|are|renames|like|format\stime|values|omitted|value|ascending|descending|key|retry|until|varying|when|with|no|advancing|up|down|uccurs|lock|length|delimited|count|delimiter|redefines|from|raising|status|class|upon|lines|line|position|col|reporting|arithmetic|localize|program|class|interface|in|at|end|page)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:attr-string|automatic|auto-skip|footing|next|group|indicate|page-counter|linage-counter|linage|line-counter|source|control|full|required|of|input|output|i-o|extend|file|error|exception|overflow|goto|on|proceed|procedures|procedure|through|invalid|data|normal|eop|returning|to|for|giving|into|by|remainder|also|numeric|free|depending|converting|replacing|after|before|all|leading|first|recursive|initialized|global|initial|resident|reference|content|are|renames|like|format\stime|values|omitted|value|ascending|descending|key|retry|until|varying|when|with|no|advancing|up|down|uccurs|lock|length|delimited|count|delimiter|redefines|from|raising|status|class|upon|lines|line|position|col|reporting|arithmetic|localize|program|class|interface|in|at|end|page)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.identifers.cobol</string>
 		</dict>
@@ -604,7 +637,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:sysin|stderr|stdout|csp|stdin|sysipt|sysout|syslist|syslst|printer|syserr|console|c01|c02|c03|c04|c05|c06|c07|c08|c09|c10|c11|c12|formfeed|switch-0|switch-10|switch-11|switch-12|switch-13|switch-13|switch-14|switch-15|switch-1|switch-2|switch-3|switch-4|switch-5|switch-6|switch-7|switch-8|switch-9|sw0|sw11|sw12|sw13|sw14|sw15|sw1|sw2|sw3|sw4|sw5|sw6|sw7|sw8|sw9|sw10)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:sysout-flush|sysin|stderr|stdout|csp|stdin|sysipt|sysout|syslist|syslst|printer|syserr|console|c01|c02|c03|c04|c05|c06|c07|c08|c09|c10|c11|c12|formfeed|switch-0|switch-10|switch-11|switch-12|switch-13|switch-13|switch-14|switch-15|switch-1|switch-2|switch-3|switch-4|switch-5|switch-6|switch-7|switch-8|switch-9|sw0|sw11|sw12|sw13|sw14|sw15|sw1|sw2|sw3|sw4|sw5|sw6|sw7|sw8|sw9|sw10)(?=\s|\.)</string>
 			<key>name</key>
 			<string>support.type.cobol</string>
 		</dict>
