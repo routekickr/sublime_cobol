@@ -1,0 +1,17 @@
+{
+    "selector": "source.cobol",
+    "cmd": "",
+    "working_dir": "${file_path:${folder}}",
+    "file_regex": "^.*,(.*)\\(([0-9]*),.*,([0-9]*).*:(.*)",
+
+    "shell": true,
+
+    "osx": {
+        "path": "/usr/local/bin:$PATH"
+    },
+
+    "windows": {
+        "cmd": ["cobol", "$file", "noint", "visualstudio", "ilgen(sub)", "nologo", "\\;", "2>&1"]
+    }
+
+}

@@ -1,0 +1,19 @@
+{
+  "selector": "source.cobol",
+  "cmd": [
+    "cobc -fsyntax-only $file"
+  ],
+  "working_dir": "$file_path",
+  "shell": true,
+  "file_regex": "^([^:]+):([0-9]+):",
+  "osx": {
+    "env": {
+      "PATH": "/usr/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:$PATH"
+    }
+  },
+  "linux": {
+    "env": {
+      "PATH": "/usr/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:$PATH"
+    }
+  }
+}
