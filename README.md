@@ -25,4 +25,5 @@ An IDE or Intellisense suport for COBOL.
 - Sequence number/add/remove/clear via extra commands
 - goto start of procedure division command
 - snippets for basic program (program-id), basic class (class-id), method, try-catch, evaluate
-
+- template COBOL programs
+- Syntax checking build system support (OpenCOBOL and Micro Focus COBOL)
