@@ -1,0 +1,6 @@
+# COBOL Language Support for Sublime Text 3
+
+v1.0.36
+=======
+ - Added support for EXEC CICS + API name highlighting
+ - Allow "end exec"
