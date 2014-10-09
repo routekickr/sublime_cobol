@@ -1,0 +1,5 @@
+v1.0.37
+========
+ - Added CICS template
+ - Tweaked "EXEC CICS" to highlight numbers
+ - Tweaked "EXEC SQL" to hightlight vars in :xx
