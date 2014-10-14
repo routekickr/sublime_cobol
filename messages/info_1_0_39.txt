@@ -1,0 +1,2 @@
+ - Fixed problem with comments > 73 characters wrongly been highlighted
+ - Tweak things that are "comments".. object-computer/source-computer/installation/date-written/date-compiled

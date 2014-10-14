@@ -105,6 +105,23 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
+					<string>keyword.verb.cobol</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>comment.line.obol</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>((?i:installation|author|source-computer|object-computer|date-written|date-compiled)(.*\.))</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
 					<string>keyword.start.bracket.cobol</string>
 				</dict>
 				<key>2</key>
@@ -379,7 +396,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:id\s*division|identification\s*division|identification|enum-id|property-id|getter|setter|valuetype-id|author|date-written|date-compiled|entry|function-id|attribute|interface-id|method-id|factory|ctl|class-control|options|environment\s*division|environment-name|environment-value|environment|configuration\s*section|configuration|decimal-point|call-convention|source-computer|object-computer|special-names|cursor\s*is|update|picture\s*symbol|currency\s*sign|currency|repository|input-output\s*section|input-output|file\s*section|file-control|select|optional|i-o-control|data\s*division|working-storage\s*section|working-storage|section|local-storage|linkage\s*section|linkage|communication|report|screen\s*section|fd|rd|cd|sd|printing|procedure\s*division|procedure|debugging|declaratives|installation|security|based-storage|size|font)\b[^-]</string>
+			<string>\b(?&lt;!-)(?i:id\s*division|identification\s*division|identification|enum-id|property-id|getter|setter|valuetype-id|entry|function-id|attribute|interface-id|method-id|factory|ctl|class-control|options|environment\s*division|environment-name|environment-value|environment|configuration\s*section|configuration|decimal-point|call-convention|special-names|cursor\s*is|update|picture\s*symbol|currency\s*sign|currency|repository|input-output\s*section|input-output|file\s*section|file-control|select|optional|i-o-control|data\s*division|working-storage\s*section|working-storage|section|local-storage|linkage\s*section|linkage|communication|report|screen\s*section|fd|rd|cd|sd|printing|procedure\s*division|procedure|debugging|declaratives|security|based-storage|size|font)\b[^-]</string>
 			<key>name</key>
 			<string>keyword.identifiers.cobol</string>
 		</dict>
@@ -460,7 +477,7 @@
 			<key>comment</key>
 			<string>program-id. ssss </string>
 			<key>match</key>
-			<string>(?i:program-id)\.\s*((?:[a-zA-Z][a-zA-Z0-9\$\-_]*|[a-zA-Z]))</string>
+			<string>(?i:program-id)\.\s*((?:[a-zA-Z][a-zA-Z0-9\$\-_]*|[a-zA-Z])\.)</string>
 			<key>name</key>
 			<string>keyword.program-id.cobol</string>
 		</dict>
