@@ -1,5 +1,6 @@
 {
     "install": "messages/install.txt",
     "1.0.36": "messages/info_1_0_36.txt",
-    "1.0.37": "messages/info_1_0_37.txt"
+    "1.0.37": "messages/info_1_0_37.txt",
+    "1.0.38": "messages/info_1_0_38.txt"
 }

@@ -1,0 +1,4 @@
+	 - Added "ACUCOBOL" variant of the generic COBOL syntax, so that we can
+   highlight the line as invalid from column 73 onwards
+   - Request from "Enrico Battiston" via pull request
+ 
