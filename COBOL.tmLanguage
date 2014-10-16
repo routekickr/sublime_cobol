@@ -450,7 +450,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:attr-string|automatic|auto-skip|footing|next|group|indicate|page-counter|linage-counter|linage|line-counter|source|control|full|required|of|input|output|i-o|extend|file|error|exception|overflow|goto|on|proceed|procedures|procedure|through|invalid|data|normal|eop|returning|to|for|giving|into|by|remainder|also|numeric|free|depending|converting|replacing|after|before|all|leading|first|recursive|initialized|global|initial|resident|reference|content|are|renames|like|format\stime|values|omitted|value|ascending|descending|key|retry|until|varying|when|with|no|advancing|up|down|uccurs|lock|length|delimited|count|delimiter|redefines|from|raising|status|class|upon|lines|line|position|col|reporting|arithmetic|localize|program|class|interface|in|at|end|page)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:attr-string|automatic|auto-skip|footing|next|group|indicate|page-counter|linage-counter|linage|line-counter|source|control|full|required|of|input|output|i-o|extend|file|error|exception|overflow|goto|on|proceed|procedures|procedure|through|invalid|data|normal|eop|returning|to|for|giving|into|by|remainder|also|numeric|free|depending|converting|replacing|after|before|all|leading|first|recursive|initialized|global|initial|resident|reference|content|are|renames|like|format\stime|values|omitted|value|ascending|descending|key|retry|until|varying|when|with|no|advancing|up|down|uccurs|lock|length|delimited|count|delimiter|redefines|from\s*console|from\s*command-line|from\s*user\s*name|from\s*day\s*yyyyddd|from\s*day|from\s*time|from\s*day-of-week|from\s*escape|from\s*day\s*yyyyddd|from\s*date\s*yyyymmdd|from\s*date|from|raising|status|class|upon|lines|line|position|col|reporting|arithmetic|localize|program|class|interface|in|at|end|page)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.identifers.cobol</string>
 		</dict>
@@ -675,7 +675,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\s(?i:=|&lt;|&gt;|&lt;=|&gt;=|&lt;&gt;|\+|\-|\*|\/|b-and|b-or|b-xor|b-not|b-left|b-right|and|or|not|equals|equal)(?=\s|\.)</string>
+			<string>\s(?i:=|&lt;|&gt;|&lt;=|&gt;=|&lt;&gt;|\+|\-|\*|\/|b-and|b-or|b-xor|b-not|b-left|b-right|and|or|not|equals|equal|greater\s*than|less\s*than)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.operator.comparison.cobol</string>
 		</dict>
