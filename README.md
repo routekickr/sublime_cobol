@@ -26,4 +26,4 @@ An IDE or Intellisense suport for COBOL.
 - goto start of procedure division command
 - snippets for basic program (program-id), basic class (class-id), method, try-catch, evaluate
 - template COBOL programs
-- Syntax checking build system support (OpenCOBOL and Micro Focus COBOL)
+- Syntax checking build system support (OpenCOBOL, Micro Focus ACUCOBOL GT and Micro Focus COBOL)
