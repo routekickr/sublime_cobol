@@ -1,13 +1,8 @@
-[{
-    "keys": ["ctrl+/"],
-    "command": "cobol_comment_toggle",
-    "args": {
-        "block": false
-    }
-}, {
-    "keys": ["ctrl+shift+/"],
-    "command": "cobol_comment_toggle",
-    "args": {
-        "block": true
-    }
-} ]
+[
+	{ "keys": ["ctrl+/"], "command": "cobol_comment_toggle", "args": { "block": false } },
+	{ "keys": ["ctrl+shift+/"], "command": "cobol_comment_toggle", "args": { "block": true } },
+
+	{ "keys": ["alt+shift+c"], "command": "set_file_type", "args": {"syntax": "Packages/COBOL Syntax/COBOL.tmLanguage"} },
+	{ "keys": ["alt+shift+a"], "command": "set_file_type", "args": {"syntax": "Packages/COBOL Syntax/ACUCOBOL.tmLanguage"} },
+	{ "keys": ["alt+shift+o"], "command": "set_file_type", "args": {"syntax": "Packages/COBOL Syntax/OpenCOBOL.tmLanguage"} }
+]

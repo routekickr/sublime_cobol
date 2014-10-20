@@ -43,7 +43,7 @@
 			<key>match</key>
 			<string>(?:^|\s)&gt;&gt;(?i:if|else|elif|end-if)(?:$|\s.*$)</string>
 			<key>name</key>
-			<string>meta.preprocessor</string>
+			<string>invalid.illegal.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>

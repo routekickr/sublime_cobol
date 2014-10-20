@@ -27,3 +27,8 @@ An IDE or Intellisense suport for COBOL.
 - snippets for basic program (program-id), basic class (class-id), method, try-catch, evaluate
 - template COBOL programs
 - Syntax checking build system support (OpenCOBOL, Micro Focus ACUCOBOL GT and Micro Focus COBOL)
+
+## Shortcuts
+- [ ALT SHIFT A ]: Change to ACUCOBOL Syntax
+- [ ALT SHIFT C ]: Change to COBOL Syntax
+- [ ALT SHIFT O ]: Change to OpenCOBOL Syntax

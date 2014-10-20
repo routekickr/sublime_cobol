@@ -95,7 +95,7 @@ class CobolCommentToggleCommand(sublime_plugin.TextCommand):
         return lineContents
 
     def run(self, edit, block):  
-        if self.view.settings().get('syntax') != 'Packages/COBOL Syntax/COBOL.tmLanguage':
+        if self.view.settings().get('syntax').rpartition('/')[0] != 'Packages/COBOL SyntaxZZZZ':
                 self.view.run_command("toggle_comment", {"block": block})
                 return
 
