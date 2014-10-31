@@ -17,6 +17,12 @@
 	<array>
 		<dict>
 			<key>match</key>
+			<string>(^[0-9 a-zA-Z\*\-][0-9 a-zA-Z\\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][\*/]&gt;\s*(?i:NOTE|FIXME|TODO|CHANGED).*$)</string>
+			<key>name</key>
+			<string>comment.line.note.python</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>(^[0-9 a-zA-Z\*\-][0-9 a-zA-Z\\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][\*/].*$)</string>
 			<key>name</key>
 			<string>comment.line.set.cobol</string>
@@ -50,6 +56,12 @@
 			<string>(^[0-9][0-9][0-9][0-9][0-9][0-9])</string>
 			<key>name</key>
 			<string>comment.line.rem.cobol</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(\*&gt;\s*(?i:NOTE|FIXME|TODO|CHANGED).*$)</string>
+			<key>name</key>
+			<string>comment.line.note.python</string>
 		</dict>
 		<dict>
 			<key>match</key>
