@@ -17,7 +17,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>(^[0-9 a-zA-Z\*\-][0-9 a-zA-Z\\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][\*/]&gt;\s*(?i:NOTE|FIXME|TODO|CHANGED).*$)</string>
+			<string>(^[0-9 a-zA-Z\*\-][0-9 a-zA-Z\\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][0-9 a-zA-Z\*\-][\*/][&gt; ]\s*(?i:NOTE|FIXME|TODO|CHANGED).*$)</string>
 			<key>name</key>
 			<string>comment.line.note.python</string>
 		</dict>
