@@ -408,7 +408,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:id\s*division|identification\s*division|identification|enum-id|property-id|getter|setter|valuetype-id|entry|function-id|attribute|interface-id|method-id|factory|ctl|class-control|options|environment\s*division|environment-name|environment-value|environment|configuration\s*section|configuration|decimal-point|call-convention|special-names|cursor\s*is|update|picture\s*symbol|currency\s*sign|currency|repository|input-output\s*section|input-output|file\s*section|file-control|select|optional|i-o-control|data\s*division|working-storage\s*section|working-storage|section|local-storage|linkage\s*section|linkage|communication|report|screen\s*section|fd|rd|cd|sd|printing|procedure\s*division|procedure|debugging|declaratives|security|based-storage|size|font)\b[^-]</string>
+			<string>\b(?&lt;!-)(?i:id\s*division|identification\s*division|identification|property-id|getter|setter|entry|function-id|attribute|interface-id|factory|ctl|class-control|options|environment\s*division|environment-name|environment-value|environment|configuration\s*section|configuration|decimal-point|call-convention|special-names|cursor\s*is|update|picture\s*symbol|currency\s*sign|currency|repository|input-output\s*section|input-output|file\s*section|file-control|select|optional|i-o-control|data\s*division|working-storage\s*section|working-storage|section|local-storage|linkage\s*section|linkage|communication|report|screen\s*section|fd|rd|cd|sd|printing|procedure\s*division|procedure|debugging|declaratives|security|based-storage|size|font)\b[^-]</string>
 			<key>name</key>
 			<string>keyword.identifiers.cobol</string>
 		</dict>
@@ -467,8 +467,29 @@
 			<string>keyword.identifers.cobol</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.verb.cobol</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.cobol</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>program-id. ssss </string>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:bit|binary-char|binary-char-unsigned|binary-short|binary-short-unsigned|binary.long|binary-c-long|binary-long-unsigned|binary-long|binary-double|binary-double-unsigned|float-short|float-extended|float-long|bit|condition-value|characters|character\s*type|character|comma|decimal|object\sreference|object-reference|object|list|dictionary|unsigned)(?=\s|\.)</string>
+			<string>(?i:type)\s*(?:[a-zA-Z][a-zA-Z0-9\$\-_]*|[a-zA-Z])</string>
+			<key>name</key>
+			<string>keyword.program-id.cobol</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(?&lt;!-)(?i:type|bit|binary-char|binary-char-unsigned|binary-short|binary-short-unsigned|binary.long|binary-c-long|binary-long-unsigned|binary-long|binary-double|binary-double-unsigned|float-short|float-extended|float-long|bit|condition-value|characters|character\s*type|character|comma|decimal|object\sreference|object-reference|object|list|dictionary|unsigned)(?=\s|\.)</string>
 			<key>name</key>
 			<string>storage.type.cobol</string>
 		</dict>
@@ -496,10 +517,15 @@
 		<dict>
 			<key>captures</key>
 			<dict>
-				<key>1</key>
+				<key>0</key>
 				<dict>
 					<key>name</key>
 					<string>keyword.other.verb.cobol</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.cobol</string>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -525,6 +551,27 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
+					<string>entity.name.method.cobol</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>method-id ssss </string>
+			<key>match</key>
+			<string>(?i:method-id\.|method-id|enum-id\.|enum-id|valuetype-id\.|valuetype-id)\s*((?:[a-zA-Z][a-zA-Z0-9\-\.]*|[a-zA-Z]))</string>
+			<key>name</key>
+			<string>keyword.method-id.cobol</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.verb.cobol</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
 					<string>entity.name.class.cobol</string>
 				</dict>
 			</dict>
@@ -538,6 +585,11 @@
 		<dict>
 			<key>captures</key>
 			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.cobol</string>
+				</dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
@@ -546,29 +598,37 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.identifers.cobol</string>
+					<string>support.type.cobol</string>
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>invoke type sss:.. </string>
+			<string> ::.. </string>
 			<key>match</key>
-			<string>(?i:invoke)\s*(?i:type)</string>
-			<key>name</key>
-			<string>keyword.invoketype</string>
+			<string>(?i:self)(::)\s*([0-9a-zA-Z_\-\.]*)</string>
 		</dict>
 		<dict>
 			<key>captures</key>
 			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>support.type.cobol</string>
+				</dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>variable.language.self.cobol</string>
+					<string>keyword.verbs.cobol</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>support.type.cobol</string>
 				</dict>
 			</dict>
+			<key>comment</key>
+			<string> ::.. </string>
 			<key>match</key>
-			<string>(?i:self)::</string>
-			<key>name</key>
-			<string>keyword.invoke.self</string>
+			<string>([0-9a-zA-Z_\-\.]*)(::)\s*([0-9a-zA-Z_\-\.]*)</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -585,32 +645,9 @@
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>invoke sss:.. </string>
-			<key>match</key>
-			<string>(?i:invoke)\s*([0-9a-zA-Z_\-\.]*)</string>
-			<key>name</key>
-			<string>keyword.invoketype</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.verbs.cobol</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>support.type.cobol</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>invoke sss:.. </string>
+			<string> ::.. </string>
 			<key>match</key>
 			<string>(::)\s*([0-9a-zA-Z_\-\.]*)</string>
-			<key>name</key>
-			<string>keyword.invoketype</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -628,12 +665,10 @@
 			</dict>
 			<key>match</key>
 			<string>\b(?&lt;!-)(?i:type\s+)([0-9a-zA-Z\.]*)</string>
-			<key>name</key>
-			<string>storage.type.source.cobol</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:accept|add|address|allocate|call|cancel|chain|close|commit|compute|continue|delete|disable|display|bell|divide|enable|enter|if|evaluate|exhibit|named|exit|free|generate|go\s*to|go|goback|initialize\sonly|initialize|initiate|inspect|merge|set|move|corresponding|corr|multiply|open|sharing|sort-merge|perform|purge|raise|read|receive|release|return|rewrite|rounded|rollback|search|send|sort|start|service|subtract|suppress|terminate|then|unlock|string|unstring|validate|write|next|statement|sentence)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:accept|add|address|allocate|call|cancel|chain|close|commit|compute|continue|delete|disable|display|bell|divide|enable|enter|if|evaluate|exhibit|named|exit|free|generate|go\s*to|go|goback|initialize\sonly|initialize|initiate|inspect|merge|set|invoke|move|corresponding|corr|multiply|open|sharing|sort-merge|perform|purge|raise|read|receive|release|return|rewrite|rounded|rollback|search|send|sort|start|service|subtract|suppress|terminate|then|unlock|string|unstring|validate|write|next|statement|sentence)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.verbs.cobol</string>
 		</dict>
@@ -693,7 +728,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:class-id|program-id)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:enum-id|valuetype-id|method-id|class-id|program-id)(?=\s|\.)</string>
 			<key>name</key>
 			<string>keyword.verbs.cobol</string>
 		</dict>
