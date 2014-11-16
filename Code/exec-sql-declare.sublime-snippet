@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+       EXEC SQL BEGIN DECLARE SECTION END-EXEC.
+       ${0}
+       EXEC SQL END DECLARE SECTION END-EXEC.
+]]></content>
+	<tabTrigger>exec</tabTrigger>
+	<scope>source.cobol</scope>
+</snippet>

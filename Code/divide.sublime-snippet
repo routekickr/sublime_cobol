@@ -3,5 +3,5 @@
 divide ${1:a} by ${2:b} giving ${3:c} ${4:remainder ${5:d}}
 ]]></content>
 	<tabTrigger>divide</tabTrigger> -->
-	<scope>source.cobol</scope> -->
+	<scope>source.cobol, source.acucobol, source.opencobol</scope> -->
 </snippet>

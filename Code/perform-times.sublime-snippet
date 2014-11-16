@@ -3,5 +3,5 @@
 perform ${1:paragraph-name} ${2:value-1} times
 ]]></content>
 	<tabTrigger>perform</tabTrigger>
-	<scope>source.cobol</scope>
+	<scope>source.cobol, source.acucobol, source.opencobol</scope>
 </snippet>

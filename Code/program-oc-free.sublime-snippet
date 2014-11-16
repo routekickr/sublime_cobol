@@ -41,5 +41,5 @@ end program ${TM_FILENAME/(.*)[.](.*)/$1/g}.
 ]]></content>
 	<tabTrigger>identification</tabTrigger>
 	<description>Template for free format (OC)</description>
-	<scope>source.cobol</scope>
+	<scope>source.opencobol</scope>
 </snippet>

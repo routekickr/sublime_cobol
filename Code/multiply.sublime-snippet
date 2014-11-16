@@ -3,5 +3,5 @@
 multiply ${1:a} by ${2:b} giving ${3:c}
 ]]></content>
 	<tabTrigger>multiply</tabTrigger>
-	<scope>source.cobol</scope>
+	<scope>source.cobol, source.acucobol, source.opencobol</scope>
 </snippet>

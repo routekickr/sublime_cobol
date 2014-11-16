@@ -5,5 +5,5 @@ perform ${1:paragraph-name} varying ${2:field-1}
  until ${5:condition}
 ]]></content>
 	<tabTrigger>perform</tabTrigger>
-	<scope>source.cobol</scope>
+	<scope>source.cobol, source.acucobol, source.opencobol</scope>
 </snippet>

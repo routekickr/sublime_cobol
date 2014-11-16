@@ -5,5 +5,5 @@
            goback.
 ]]></content>
 	<tabTrigger>entry</tabTrigger>
-	<scope>source.cobol</scope> 
+	<scope>source.cobol, source.acucobol, source.opencobol</scope> 
 </snippet>

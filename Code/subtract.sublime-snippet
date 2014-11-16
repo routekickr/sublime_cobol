@@ -3,5 +3,5 @@
 subtract ${1:a} from ${2:b} giving ${3:c}
 ]]></content>
 	<tabTrigger>subtract</tabTrigger> -->
-	<scope>source.cobol</scope> -->
+	<scope>source.cobol, source.acucobol, source.opencobol</scope> -->
 </snippet>

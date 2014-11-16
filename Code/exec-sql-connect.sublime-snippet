@@ -1,8 +1,7 @@
 <snippet>
 	<content><![CDATA[
-COPY "${1:subprog.cpy}"
-    REPLACING ==${2:()}== BY ==${3:lnk-}==.
+       EXEC SQL INCLUDE SQLCA END-EXEC.
 ]]></content>
-	<tabTrigger>copy</tabTrigger>
+	<tabTrigger>exec</tabTrigger>
 	<scope>source.cobol, source.acucobol, source.opencobol</scope>
 </snippet>

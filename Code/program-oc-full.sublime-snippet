@@ -197,5 +197,5 @@ Cobol *> ***************************************************************
 ]]></content>
 	<tabTrigger>identification</tabTrigger>
 	<description>Full template (OC)</description>
-	<scope>source.cobol</scope>
+	<scope>source.opencobol</scope>
 </snippet>

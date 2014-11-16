@@ -3,5 +3,5 @@
 add ${1:a} to ${2:b} giving ${3:c}
 ]]></content>
 	<tabTrigger>add</tabTrigger>
-	<scope>source.cobol</scope>
+	<scope>source.cobol, source.acucobol, source.opencobol</scope>
 </snippet>

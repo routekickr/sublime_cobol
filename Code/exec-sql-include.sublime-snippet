@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+       EXEC SQL INCLUDE SQLCA END-EXEC.
+]]></content>
+	<tabTrigger>exec</tabTrigger>
+	<scope>source.cobol</scope>
+</snippet>
