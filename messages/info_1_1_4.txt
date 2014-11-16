@@ -1,0 +1,1 @@
+Tweak snippets to make them visible to opencobol/acucobol syntax variants.
