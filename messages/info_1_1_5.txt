@@ -1,0 +1,2 @@
+Fixed problem with "type xx" syntax
+Add lc_*
