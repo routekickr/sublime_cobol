@@ -518,7 +518,7 @@
 			<key>comment</key>
 			<string>program-id. ssss </string>
 			<key>match</key>
-			<string>(\b(?&lt;!-))(?i:type)\s*(?:[a-zA-Z][a-zA-Z0-9\$\-\._]*|[a-zA-Z])</string>
+			<string>(\b(?&lt;!-))(?i:type)\s+(?:[a-zA-Z][a-zA-Z0-9\$\-\._]*|[a-zA-Z])</string>
 		</dict>
 		<dict>
 			<key>match</key>
