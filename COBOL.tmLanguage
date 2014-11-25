@@ -122,11 +122,16 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
+					<string>keyword.verb.cobol</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
 					<string>comment.line.obol</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>((?i:installation|author|source-computer|object-computer|date-written|date-compiled)(.*\.))</string>
+			<string>((\b(?&lt;!-))(?i:installation|author|source-computer|object-computer|date-written|date-compiled)(.*\.))</string>
 		</dict>
 		<dict>
 			<key>captures</key>
