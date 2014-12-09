@@ -4,12 +4,6 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>cbl</string>
-		<string>cpy</string>
-		<string>cob</string>
-		<string>dds</string>
-		<string>ss</string>
-		<string>wks</string>
 	</array>
 	<key>name</key>
 	<string>OpenCOBOL</string>

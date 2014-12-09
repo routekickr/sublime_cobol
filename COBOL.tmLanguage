@@ -173,7 +173,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(?&lt;!-)(?i:zeroes|zeros|zeros|zero|spaces|space|quotes|quote|low-values|low-value|high-values|high-value)(?=\s|\.)</string>
+			<string>\b(?&lt;!-)(?i:zeroes|zeros|zeros|zero|spaces|space|quotes|quote|low-values|low-value|high-values|high-value)(?=\s|\.|\))</string>
 			<key>name</key>
 			<string>constant.language.figurative.cobol</string>
 		</dict>

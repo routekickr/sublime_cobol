@@ -1,0 +1,41 @@
+<snippet>
+    <content><![CDATA[
+       identification division.
+       program-id. ${1:${TM_FILENAME/(.*?)(\..+)/$1/}}.
+
+       environment division.
+       input-output section.
+        file-control.
+        select ${2:cust} assign to '${4:${2}}.txt'
+        organization is line sequential.            
+
+       data division.
+       file section.
+       fd ${2}.
+       01 ${3:${2}-file}.
+        03 ${5:customer-id}    pic 9(5).
+        03 ${6:customer-info}  pic x(65).
+
+       working-storage section.
+       01 ws-eof       pic a. 
+
+       procedure division.
+          open input ${2}.
+             perform until ws-eof='Y'
+                read ${2}
+                   at end
+                      move 'Y' to ws-eof
+                   not at end
+                      display ${5} " => " ${6}
+                end-read
+             end-perform
+          close ${2}.
+          $0
+          goback.
+
+       end program ${1:${TM_FILENAME/(.*?)(\..+)/$1/}}.]]>
+</content>
+    <tabTrigger>program-id</tabTrigger>
+    <scope>source.cobol</scope>
+    <description>Minimum template File/Seq (MF)</description>
+</snippet>

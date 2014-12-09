@@ -1,0 +1,1 @@
+Add template for program just simply reads a line sequential file
